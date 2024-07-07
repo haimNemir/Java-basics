@@ -1,36 +1,46 @@
 package Threads;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
-public class Task{
-    private String taskDescription;
-    private LocalDateTime taskDeadline;
+public class Task implements Comparable<Task>{
+    private String descriptionTask;
+    private LocalDateTime deadline;
 
-    public Task(String taskDescription, LocalDateTime taskDeadline) {
-        this.taskDescription = taskDescription;
-        this.taskDeadline = taskDeadline;
+    public Task(String descriptionTask, LocalDateTime deadline) {
+        this.descriptionTask = descriptionTask;
+        this.deadline = deadline;
     }
 
-    public String getTaskDescription() {
-        return taskDescription;
+    public String getDescriptionTask() {
+        return descriptionTask;
     }
 
-    public LocalDateTime getTaskDeadline() {
-        return taskDeadline;
+    public void setDescriptionTask(String descriptionTask) {
+        this.descriptionTask = descriptionTask;
     }
 
-    public void setTaskDescription(String taskDescription) {
-        this.taskDescription = taskDescription;
+    public LocalDateTime getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(LocalDateTime deadline) {
+        this.deadline = deadline;
+    }
+
+    @Override
+    public String toString() {
+        return "\nTask \t" + descriptionTask + ": DeadLine: \t\t\t\t" + deadline;
     }
 
 
     @Override
-    public String toString() {
-        return "Task{" +
-                "taskDescription='" + taskDescription + '\'' +
-                ", taskDeadline=" + taskDeadline +
-                '}';
+    public int compareTo(Task o) {
+        if(o.deadline.isEqual(this.deadline)){
+            return 0;
+        } else if (o.deadline.isBefore(this.deadline)){
+            return 1;
+        } else
+            return -1;
     }
-
-
 }

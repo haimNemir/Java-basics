@@ -1,6 +1,8 @@
 package Threads;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class ThreadApp {
     public static void main(String[] args) {
@@ -22,8 +24,26 @@ public class ThreadApp {
 //        long endTime =  System.currentTimeMillis();
 //        System.out.println("how long did it take to finish the threads: " + (endTime - startTime));
 
-//        Ex.2 תרגיל מסכם
+//        Ex. תרגיל מסכם
 
+        ArrayList<Task> myTasks = new ArrayList<>();
+        myTasks.add(new Task("Trash", LocalDateTime.of(2024, 7,7,15,54,15)));
+        myTasks.add(new Task("workout", LocalDateTime.of(2024, 7,7,15,38,1)));
+        myTasks.add(new Task("dishes", LocalDateTime.of(2024, 7,7,15,55,1)));
+        myTasks.add(new Task("order", LocalDateTime.of(2024, 7,7,15,27,1)));
+        myTasks.add(new Task("church the phone", LocalDateTime.of(2024, 7,7,15,43,1)));
+        myTasks.add(new Task("take delivery", LocalDateTime.of(2024, 7,7,15,42,1)));
+//        DeadLineChecker deadLineChecker = new DeadLineChecker(myTasks);
+//        deadLineChecker.start();
+        System.out.println(myTasks);
+        SortTaskByDate sortTaskByDate = new SortTaskByDate(myTasks);
+        sortTaskByDate.start();
+        try {
+            sortTaskByDate.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(myTasks);
 
     }
 }
