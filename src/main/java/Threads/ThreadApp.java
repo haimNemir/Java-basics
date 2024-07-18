@@ -33,7 +33,7 @@ public class ThreadApp {
         myTasks.add(new Task("order", LocalDateTime.of(2024, 7,7,15,27,1)));
         myTasks.add(new Task("church the phone", LocalDateTime.of(2024, 7,7,15,43,1)));
         myTasks.add(new Task("take delivery", LocalDateTime.of(2024, 7,7,15,42,1)));
-//        DeadLineChecker deadLineChecker = new DeadLineChecker(myTasks);
+//        DeadLineChecker deadLineChecker = new DeadLineChecker(myTasks); // cant run with SortTaskByDate at one time
 //        deadLineChecker.start();
         System.out.println(myTasks);
         SortTaskByDate sortTaskByDate = new SortTaskByDate(myTasks);
