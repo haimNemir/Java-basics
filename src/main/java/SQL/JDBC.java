@@ -1,5 +1,7 @@
 package SQL;
 
+import Utils.EnumNames;
+
 import java.sql.*;
 import java.util.Scanner;
 
@@ -31,7 +33,7 @@ public class JDBC {
                     case 4:
                         System.out.println("Delete category, Please enter name of category to delete:");
                         deleteCategory(scanner.next());
-                        break;// not working!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                        break;
                 }
             }
         } catch (Exception e){
@@ -79,7 +81,7 @@ public class JDBC {
 
     private static void deleteCategory(String nameOfCategory){
         try (Connection connection = DriverManager.getConnection(connectionString, "root", "Qwert1trewq!")){
-            PreparedStatement statement = connection.prepareStatement("delete from category where name = ?;");
+            PreparedStatement statement = connection.prepareStatement("delete from sakila.category where name = (?);");
             statement.setString(1, nameOfCategory);
             statement.execute();
         } catch (SQLException e) {

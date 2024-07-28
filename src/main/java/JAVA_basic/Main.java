@@ -37,7 +37,28 @@ public class Main {
 //        }
 //        System.out.println("The result is:" + firstValue);
 //        int numbers = JAVA_basic.johnBriceCourse.math(3,5);
+        // שאלה ראשונה במצגת סיבוכיות:
+        int number = 576189917;
+        printNumbers(number);
+    }
+    public static void printNumbers(int number) {
+        int count = 0;
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        int[] allDigits = {0,1,2,3,4,5,6,7,8,9};
+        int j = 0;
+        for (int i = 0; i < number; j++) {
+            treeMap.put(number % 10, number % 10);
+            number = number / 10;
+            count++;
 
+        }
+        System.out.println(count);
+        System.out.println("The tree map is:" + treeMap);
+        for (int i = 0; i < 10; i++) {
+            if (treeMap.get(i) != i){
+
+            }
+        }
     }
 
     //        public static String myFullName() {
@@ -155,6 +176,8 @@ public class Main {
         return arr1;
     }
 
-
 }
+
+
+
 
