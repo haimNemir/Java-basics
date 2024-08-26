@@ -2,6 +2,8 @@ package JAVA_basic;
 
 import OOP_exercises.Speaker;
 
+import java.sql.Date;
+
 
 // exercise 1, found the scope of rectangle.
 public class johnBriceCourse {
@@ -718,7 +720,7 @@ public class johnBriceCourse {
         System.out.println(num);
 
 
-
+        System.out.println(Date.valueOf("2024-08-14"));
 
 
     }
