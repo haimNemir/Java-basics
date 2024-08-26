@@ -3,6 +3,7 @@ package Utils;
 import java.util.Random;
 
 public enum EnumCarsModels {
+    SUZUKI_SWIFT,
     TOYOTA_COROLLA,
     HONDA_CIVIC,
     FORD_FOCUS,
