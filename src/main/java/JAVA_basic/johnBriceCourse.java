@@ -659,27 +659,27 @@ public class johnBriceCourse {
 //        num = num * num2;
 //        return num;
 //        תרגול פונקציות: ex.1
-//        System.out.println(JAVA_basic.Main.myFullName());
-//        System.out.println(JAVA_basic.Main.myFullName());
+//        System.out.println(JAVA_basic.Stream.Main.myFullName());
+//        System.out.println(JAVA_basic.Stream.Main.myFullName());
 //        ex.2 : צרו מתודה המציגה את כל המספרים הזוגיים מ-2 ועד 200 כולל קצוות.
 //קיראו לה מה-main שלוש פעמים.
 //        int numbersEvenOrOdd = 20;
 //        for (int i = 0; i < numbersEvenOrOdd/2; i++) {
-//            System.out.print(" " + JAVA_basic.Main.evenNumbers(2,numbersEvenOrOdd,i));;
+//            System.out.print(" " + JAVA_basic.Stream.Main.evenNumbers(2,numbersEvenOrOdd,i));;
 //        }
-//        JAVA_basic.Main.f1();
+//        JAVA_basic.Stream.Main.f1();
 //        System.out.println("----------------");
-//        JAVA_basic.Main.f2();
+//        JAVA_basic.Stream.Main.f2();
 //        System.out.println("----------------");
-//        JAVA_basic.Main.f3();
+//        JAVA_basic.Stream.Main.f3();
 
-//        System.out.println(JAVA_basic.Main.correctDate());
-//       JAVA_basic.Main.print1toN(20);
-//       JAVA_basic.Main.printTriangle(7);
-//         JAVA_basic.Main.printNto1(8);
-//        JAVA_basic.Main.printRectangle(8, 3);
+//        System.out.println(JAVA_basic.Stream.Main.correctDate());
+//       JAVA_basic.Stream.Main.print1toN(20);
+//       JAVA_basic.Stream.Main.printTriangle(7);
+//         JAVA_basic.Stream.Main.printNto1(8);
+//        JAVA_basic.Stream.Main.printRectangle(8, 3);
 //        short a = 5; short b = 5; short c = 3; short d = 2; short e = 1;
-//        System.out.println(JAVA_basic.Main.aDouble(a,b,c,d,e));
+//        System.out.println(JAVA_basic.Stream.Main.aDouble(a,b,c,d,e));
 //        System.out.println("please enter a five numbers");
 //        Scanner scanner = new Scanner(System.in);
 //        a = scanner.nextShort();
@@ -687,26 +687,26 @@ public class johnBriceCourse {
 //        c = scanner.nextShort();
 //        d = scanner.nextShort();
 //        e = scanner.nextShort();
-//        System.out.println(JAVA_basic.Main.aDouble(a,b,c,d,e));
-//        System.out.println(JAVA_basic.Main.rand(5,25));
+//        System.out.println(JAVA_basic.Stream.Main.aDouble(a,b,c,d,e));
+//        System.out.println(JAVA_basic.Stream.Main.rand(5,25));
 //        int a = 5;
 //        int b = 7;
 //        int c = 9;
-//        System.out.println(JAVA_basic.Main.maxInt(5,7,9));
+//        System.out.println(JAVA_basic.Stream.Main.maxInt(5,7,9));
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Please enter a three numbers");
 //        a = scanner.nextInt();
 //        b = scanner.nextInt();
 //        c = scanner.nextInt();
-//        System.out.println(JAVA_basic.Main.maxInt(a,b,c));
+//        System.out.println(JAVA_basic.Stream.Main.maxInt(a,b,c));
 //        int[] bunchOfNumbers = new int[10];
-//        JAVA_basic.Main.printArray(bunchOfNumbers);
+//        JAVA_basic.Stream.Main.printArray(bunchOfNumbers);
 //        int[] arr1 = {1,2,3,5,4};
 //        for (int i = 0; i < arr1.length; i++) {
 //            System.out.print(arr1[i]);
 //        }
 //        System.out.println();
-//        JAVA_basic.Main.intArray(arr1);
+//        JAVA_basic.Stream.Main.intArray(arr1);
 //        for (int i = 0; i < arr1.length; i++) {
 //            System.out.print(arr1[i]);
 //        }
