@@ -31,7 +31,7 @@ public class Stream {
 
     Predicate<Superhero> checkCanFly = superhero -> superhero.isCanFly();
 
-    //stream work only on Lists and not on individuals
+    //+stream work only on Lists and not on individuals
     public void checkIsSuperman(){
         Predicate<Superhero> isSuperman = superhero -> superhero.getNickName().contains("Superman");
         System.out.println(isSuperman.test(new Superhero("Superman", "can band metal", true)));
@@ -60,7 +60,7 @@ public class Stream {
         names.add("Pony");
         names.add("Tonny");
         names.add("Johnny");
-        names.stream().filter(name->name.length()==4).forEach(n-> System.out.println(n));//we call to stream for the filter method of him. and filter calls Predicate Object that get one param and return boolean. stream save copy of the filtered variables from the list on him, and we can convert it to list if we add dote in the end of the line (".toList")
+        names.stream().filter(name->name.length()==4).forEach(n-> System.out.println(n));//+we call to stream for the filter method of him. and filter calls Predicate Object that get one param and return boolean. stream save copy of the filtered variables from the list on him, and we can convert it to list if we add dote in the end of the line (".toList")
     }
 
     public void getNumberFromSupplier(){
@@ -82,7 +82,7 @@ public class Stream {
         numbers.add(7);
 
         java.util.stream.Stream<Integer> stream = numbers.stream().filter(number->number%2!=0);
-        numbers.stream().filter(number->number%2==0).forEach(num-> System.out.println(num)); // before we entered logic in filter, numbers.stream was only with a references to numbers list but after we entered logic he did create "stream" that contains only the filtered numbers. .forEach(number-> System.out.println(number)); // .forEach required Consumer, and forEach is "Terminator" this mean after he was run the reference is closed and you cant call him again even you saved him on Steam object, unless you saved in List like next code line.
+        numbers.stream().filter(number->number%2==0).forEach(num-> System.out.println(num)); //+ before we entered logic in filter, numbers.stream was only with a references to numbers list but after we entered logic he did create "stream" that contains only the filtered numbers. .forEach(number-> System.out.println(number)); // .forEach required Consumer, and forEach is "Terminator" this mean after he was run the reference is closed and you cant call him again even you saved him on Steam object, unless you saved in List like next code line.
         List<Integer> oddNumbers = numbers.stream().filter(number->number%2!=0).toList();
     }
 
@@ -114,7 +114,7 @@ public class Stream {
         numbers.add(95);
         numbers.add(61);
         numbers.add(-867);
-//        numbers.stream().map(num -> num+"ABC") change the type of the variables in stream. map required 2 parameters: the first is what we get and the second is for what we want to change this parameter, here the second param is +"ABC" so its mast be String.
+//        +numbers.stream().map(num -> num+"ABC") change the type of the variables in stream. map required 2 parameters: the first is what we get and the second is for what we want to change this parameter, here the second param is +"ABC" so its mast be String.
         numbers.stream().map(num -> num+"ABC").forEach(string-> System.out.println(string));
     }
 
